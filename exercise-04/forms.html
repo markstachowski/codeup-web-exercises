@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms Elements - exercise</title>
+</head>
+<body>
+<form method="POST" action="https://http-inspector.glitch.me/">
+    <h1>Forms Registration</h1>
+
+    <label for="email">Email:&emsp;&nbsp;&nbsp;</label>
+    <input id="email" name="email" type="text" placeholder="Enter email">
+    <br>
+
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password" placeholder="Enter password">
+    <br>
+
+    <br>
+    <label for="bio">Bio</label>
+    <br>
+    <textarea id="bio" name="bio" placeholder="Enter Bio"></textarea>
+    <br>
+
+    <h4>How did you find out about our services?</h4>
+    <input type="checkbox" id="billboard" name="averts1" value="billboard">
+    <label for="billboard">Billboard</label>
+    <br>
+    <input type="checkbox" id="radio" name="averts1" value="radio">
+    <label for="radio">Radio Advertisement</label>
+    <br>
+    <input type="checkbox" id="internet" name="averts1" value="internet">
+    <label for="internet">Internet Advertisement</label>
+    <br>
+    <input type="checkbox" id="other" name="averts1" value="other">
+    <label for="other">Other</label>
+    <br>
+
+    <br>
+    <label for="browser">Please, select your web browser:</label>
+    <br>
+
+    <!-- allowing the selection of explorer, netscape and edge because someone's gotta still use these, right? -->
+    <select name="browser" id="browser">
+        <option value="safari">Safari</option>
+        <option value="firefox">Firefox</option>
+        <option value="chrome" selected>Chrome</option>
+        <option value="explorer">Internet Explorer</option>
+        <option value="netscape">Netscape Navigator</option>
+        <option value="edge">Microsoft Edge</option>
+        <option value="opera">Opera</option>
+        <option value="vivaldi">Vivaldi</option>
+        <option value="other">Other</option>
+    </select>
+
+    <br>
+
+    <input type="hidden" value="" id="ghost_buster">
+
+    <br>
+    <button type="submit">Submit the form</button>
+</form>
+
+</body>
+</html>

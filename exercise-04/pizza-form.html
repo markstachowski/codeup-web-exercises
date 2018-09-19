@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Pizza - Forms list</title>
+</head>
+<body>
+    <h1>San Antonio Pizza King - <em>The best Pizza!</em></h1>
+    <hr>
+
+    <main>
+        <form method="POST" action="https://http-inspector.glitch.me/">
+
+        <div id="top">
+            <br>
+            <p><b>Login to "The Pizza King"</b></p>
+            <label for="email">Email:&emsp;&nbsp;&nbsp;</label>
+            <input id="email" name="email" placeholder="Enter email address">
+            <br>
+            <label for="password">Password:</label>
+            <input id="password" name="password" placeholder="Enter password">
+            <br>
+            <hr>
+
+            <p><strong>Pizza Order Form</strong></p>
+            <p><em>What pizza would you like to order? (Sizes: small - 25 cm, medium - 35 cm, large - 50 cm)</em></p>
+
+            <img src="img/plain.jpg" alt="plain pizza" width="180">
+            <br>
+
+            <input type="checkbox" id="plain" name="plain">Plain Pizza
+            <br>
+
+            <br>
+            <input type="radio" id="small" name="size" value="small">
+            <label for="small">Small</label>
+            <br>
+            <input type="radio" id="medium" name="size" value="medium">
+            <label for="medium">Medium</label>
+            <br>
+            <input type="radio" id="large" name="size" value="large">
+            <label for="large">Large</label>
+            <br>
+            <input type="text" id="pizza" placeholder="Quantity">
+            <br>
+
+            <img src="img/veggie.jpg" alt="veggie pizza" width="180">
+            <br>
+
+            <input type="checkbox" id="veggie" name="plain">Veggie Pizza
+            <br>
+
+            <br>
+            <input type="radio" id="small" name="size" value="small">
+            <label for="small">Small</label>
+            <br>
+            <input type="radio" id="medium" name="size" value="medium">
+            <label for="medium">Medium</label>
+            <br>
+            <input type="radio" id="large" name="size" value="large">
+            <label for="large">Large</label>
+            <br>
+            <input type="text" id="pizza" placeholder="Quantity">
+            <br>
+
+            <img src="img/seafood.jpg" alt="seafood pizza" width="180">
+            <br>
+
+            <input type="checkbox" id="seafood" name="plain">Seafood Pizza
+            <br>
+
+            <br>
+            <input type="radio" id="small" name="size" value="small">
+            <label for="small">Small</label>
+            <br>
+            <input type="radio" id="medium" name="size" value="medium">
+            <label for="medium">Medium</label>
+            <br>
+            <input type="radio" id="large" name="size" value="large">
+            <label for="large">Large</label>
+            <br>
+            <input type="text" id="pizza" placeholder="Quantity">
+            <br>
+            <hr>
+
+            <br>
+            <label for="fname"><strong>First Name:</strong></label>
+            <input id="fname" name="fname" placeholder="Enter First Name">
+            <label for="lname"><strong>&emsp;Last Name:</strong></label>
+            <input id="lname" name="lname" placeholder="Enter Last Name">
+            <br>
+            <p><strong>Enter your street address:</strong></p>
+            <label for="address"></label>
+            <input id="address" name="address" placeholder="Enter address">
+            <br>
+            <p><strong>Enter Phone number:</strong></p>
+            <label for="phone"></label>
+            <input id="phone" name="phone" placeholder="### ### ####">
+            <br>
+            <p><strong>How are you going to pay?</strong></p>
+            Cash <input type="radio" name="cash" value="cash"><br>
+            POS <input type="radio" name="pos" value="pos">
+            <br>
+            <br>
+            <input type="hidden" value="" id="ghost_buster">
+            <button type="submit">Submit the form</button>
+
+        </div>
+
+    </main>
+</body>
+</html>
