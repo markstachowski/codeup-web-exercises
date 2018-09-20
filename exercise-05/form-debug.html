@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Please Sign Up</h1>
+    <form method="POST" action="https://http-inspector.glitch.me/">>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="username">
+        <br>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="email">
+        <br>
+
+        <label for="password">password</label>
+        <input id="password" type="password" name="password">
+        <br>
+
+        <label for="confirm_password">confirm password</label>
+        <input id="confirm_password" type="password" name="confirm_password">
+        <br>
+
+        <h2>Filing Status</h2>
+
+        <label for="">
+            <input type="radio" name="filing_status" value="single">
+            Single
+        </label>
+        <br>
+        
+        <label for="">
+            <input type="radio" name="filing_status" value="married_joint">
+            Married Filing Jointly
+        </label>
+        <br>
+        
+        <label for="">
+            <input type="radio" name="filing_status" value="married_separate">
+            Married Filing Separately
+        </label>
+        <br>
+        
+        <label for="">
+            <input type="radio" name="filing_status" value="hoh">
+            Head of Household
+        </label>
+        <br>
+        
+        <h2>This past year I was (check all that apply)</h2>
+
+        <label for="">
+            <input type="checkbox" name="employment_status" value="self_employed">
+            Self - Employed
+        </label>
+        <br>
+        
+        <label for="">
+            <input type="checkbox" name="employment_status" value="small_business">
+            Employed by a small business (< 50 employees)
+        </label>
+        <br>
+        
+        <label for="">
+            <input type="checkbox" name="employment_status" value="large_business">
+            Employed by a large business (> 50 employees)
+        </label>
+        <br>
+
+        <br>
+        <label for="browser">What kind of phone do you have</label>
+        <br>
+
+        <!-- allowing the selection of explorer, netscape and edge because someone's gotta still use these, right? -->
+        <select name="phone type" id="phone type">
+            <option value="android">Android</option>
+            <option value="iphone">iPhone</option>
+            <option value="windows" selected>Windows</option>
+            <option value="other">Other</option>
+        </select>
+
+        <hr>
+
+        <label for="newsletter">Sign Me Up For The Newsletter
+            <input type="checkbox" name="newsletter" checked="checked" id="newsletter">
+        </label>
+        <br>
+        <button type="submit">Submit the form</button>
+    </form>
+    
+
+
+</body>
+</html>
