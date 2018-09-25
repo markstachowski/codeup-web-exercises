@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+div {
+    padding: .2em;
+}
+/* CSS */
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+/*    background-color: red; */
+}
+.row {
+    width:100%;
+    background-color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    background-color: blue;
+}
+.column {
+    float: left;
+    padding: 10px;
+    border: 1px solid black;
+}
+.column.one-eighth {
+    width: 12.5%;
+    background-color: green;
+}
+.column.one-sixth {
+    width: 16.66%;
+    background-color: lightpink;
+}
+.column.one-fourth {
+    width: 25%;
+    background-color: deepskyblue;
+}
+.column.one-third {
+    width: 33.33%;
+    background-color: orange;
+}
+.column.one-half {
+    width: 50%;
+    background-color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    .column.one-eighth,
+    .column.one-sixth,
+    .column.one-fourth,
+    .column.one-third,
+    .column.one-half {
+    }
+}
