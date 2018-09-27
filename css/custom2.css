@@ -1,0 +1,39 @@
+
+.container {
+    padding: 1em;
+}
+.navbar {
+    position: relative;
+}
+.nav-item {
+    color: rgb(132,132,132);
+}
+.form-inline {
+    position: absolute;
+    left: 20em;
+}
+.jumbotron {
+    background-image: url(../img/pizza.png);
+    background-repeat: no-repeat;
+}
+.display-4 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    color: rgb(112,108,95);
+    background: rgba(255,255,255,.5);
+}
+.card {
+    width: 100%;
+}
+.card-header {
+    padding: .5em;
+}
+.card-body {
+}
+.btn-primary {
+    float: right;
+}
