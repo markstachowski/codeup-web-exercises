@@ -80,6 +80,8 @@ console.log(isNaN);
 NaN == NaN
 console.log(isNaN);
 
+console.log("Start of exercises");
+
 var sample = "Hello Codeup";
 console.log(sample.length);
 
