@@ -110,3 +110,14 @@ var random = Math.floor((Math.random() * 3) + 1);
         return totalPrice;
 }
     console.log(applyDiscount(100, 0.2));
+
+function countWhiteSpaces() {
+    var inputs = prompt("Enter input here: ");
+    var space = inputs.split(" ").length - 1;
+
+    // return space;
+    alert(space);
+}
+console.log(countWhiteSpaces());
+
+

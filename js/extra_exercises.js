@@ -149,8 +149,7 @@ alert("This is the start of the JS extra exercises!");
             console.log(hasLetterB());
         }
 
-
-         else {
+else {
             alert("Winners never quit JavaScript and quitters never win :_( ");
         }
 //})();
