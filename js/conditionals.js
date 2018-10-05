@@ -147,35 +147,45 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-var numbers = ['0', '1', '2', '3', '4', '5'];
+var numbers = [0, 1, 2, 3, 4, 5];
 var randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
 console.log(randomNumbers);
 
-    function calculateTotal() {
+    function calculateTotal(luckyNumber, totalNum) {
         var discount1 = parseFloat(0.1);
         var discount2 = parseFloat(0.25);
         var discount3 = parseFloat(0.35);
         var discount4 = parseFloat(0.50);
         var discount5 = parseFloat(0);
+        var applied1 = totalNum - (discount1*totalNum);
+        var applied2 = totalNum - (discount2*totalNum);
+        var applied3 = totalNum - (discount3*totalNum);
+        var applied4 = totalNum - (discount4*totalNum);
+        var applied5 = discount5*totalNum;
+        var dollar1 = applied1.toFixed(2);
+        var dollar2 = applied2.toFixed(2);
+        var dollar3 = applied3.toFixed(2);
+        var dollar4 = applied4.toFixed(2);
+        var dollar5 = applied5.toFixed(2);
 
-        switch (true) {
+        switch (luckyNumber) {
             case 0:
                 alert("No discount applied to order");
                 break;
             case 1:
-                alert("Discount applied of 10 percent, new total: " + (totalNum*discount1));
+                alert("Discount applied of 10 percent, new total: " + dollar1);
                 break;
             case 2:
-                alert("Discount applied of 25 percent, new total: " + (totalNum*discount2));
+                alert("Discount applied of 25 percent, new total: " + dollar2);
                 break;
             case 3:
-                alert("Discount applied of 35 percent, new total: " + (totalNum*discount3));
+                alert("Discount applied of 35 percent, new total: " + dollar3);
                 break;
             case 4:
-                alert("Discount applied of 50 percent, new total: " + (totalNum*discount4));
+                alert("Discount applied of 50 percent, new total: " + dollar4);
                 break;
             case 5:
-                alert("Discount applied and item is FREE, new total: " + (totalNum*discount5));
+                alert("Discount applied and item is FREE, new total: " + dollar5);
                 break;
             default:
                 console.log("not working");
@@ -184,7 +194,7 @@ console.log(randomNumbers);
     }
         var askPrice = prompt("How much did it cost?");
         var totalNum = parseFloat(askPrice);
-        console.log(calculateTotal(randomNumbers, totalNum));
+        console.log(calculateTotal(randomNumbers, askPrice));
 
 /**
  * TODO:
