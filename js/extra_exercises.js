@@ -108,14 +108,14 @@ alert("This is the start of the JS extra exercises!");
             // Each person gets 2 pieces of pizza.
             //     There are 0 leftover pieces.
 
-            var peopleEating = prompt("How many people are going to eat pizza? ");
-            var pizzaPie = prompt("How many pizzas did you order? ");
-            var pizzaSlices = prompt("How many slices are in a pizza? ");
-            var pizzaRemainder = parseInt(pizzaSlices / peopleEating);
-            alert(peopleEating + " people with " + pizzaPie + " pizzas.");
-            alert("Each person gets " + pizzaSlices + " pieces of pizza.");
-            alert("Total is " + pizzaPie*pizzaSlices + " pieces of pizza.");
-            alert("There are " + pizzaRemainder + " leftover pieces.");
+            // var peopleEating = prompt("How many people are going to eat pizza? ");
+            // var pizzaPie = prompt("How many pizzas did you order? ");
+            // var pizzaSlices = prompt("How many slices are in a pizza? ");
+            // var pizzaRemainder = parseInt(pizzaSlices / peopleEating);
+            // alert(peopleEating + " people with " + pizzaPie + " pizzas.");
+            // alert("Each person gets " + pizzaSlices + " pieces of pizza.");
+            // alert("Total is " + pizzaPie*pizzaSlices + " pieces of pizza.");
+            // alert("There are " + pizzaRemainder + " leftover pieces.");
 
             function countLetters(){
                 var input = prompt("Enter input: ");

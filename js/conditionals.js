@@ -18,32 +18,32 @@
 
 /* ########################################################################## */
 
-        // var confirmed = confirm("Would you like to enter a number? ");
-        //     if (confirmed === true) {
-        //     var stringNumber = prompt("What number would you like to enter? ");
-        //         var newNumber = Number(stringNumber);
-        //         if (isNaN(stringNumber)) {
-        //             alert("This is not a number... no information will be displayed!");
-        //         } else if (newNumber%2 == 0) {
-        //             alert("Your number is even!");
-        //             alert("Your number plus 100 is " + (newNumber + 100));
-        //             if (newNumber >= 0) {
-        //                 alert("Your number is positive!");
-        //             } else {
-        //                 alert("Your number is negative!");
-        //             }
-        //         } else {
-        //             alert("Your number is odd!");
-        //             alert("Your number plus 100 is " + (newNumber + 100));
-        //             if (newNumber >= 0) {
-        //                 alert("Your number is positive!");
-        //             } else {
-        //                 alert("Your number is negative!");
-        //             }
-        //         }
-        //     } else {
-        //     alert("Exiting program");
-        // }
+        var confirmed = confirm("Would you like to enter a number? ");
+            if (confirmed === true) {
+            var stringNumber = prompt("What number would you like to enter? ");
+                var newNumber = Number(stringNumber);
+                if (isNaN(stringNumber)) {
+                    alert("This is not a number... no information will be displayed!");
+                } else if (newNumber%2 == 0) {
+                    alert("Your number is even!");
+                    alert("Your number plus 100 is " + (newNumber + 100));
+                    if (newNumber >= 0) {
+                        alert("Your number is positive!");
+                    } else {
+                        alert("Your number is negative!");
+                    }
+                } else {
+                    alert("Your number is odd!");
+                    alert("Your number plus 100 is " + (newNumber + 100));
+                    if (newNumber >= 0) {
+                        alert("Your number is positive!");
+                    } else {
+                        alert("Your number is negative!");
+                    }
+                }
+            } else {
+            alert("Exiting program");
+        }
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
