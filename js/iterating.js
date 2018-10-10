@@ -59,4 +59,5 @@
         function arrayItem3(array) {
             console.log(array[array.length -1]);
         }
-        //})();
+
+//})();
