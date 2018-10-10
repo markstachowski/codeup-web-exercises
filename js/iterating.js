@@ -57,6 +57,6 @@
             console.log(array[1]);
         }
         function arrayItem3(array) {
-            console.log(array[-1]);
+            console.log(array[array.length -1]);
         }
         //})();
