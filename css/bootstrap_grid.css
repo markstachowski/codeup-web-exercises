@@ -1,0 +1,61 @@
+.container-fluid {
+    background-color: rgb(240, 240, 240);
+}
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+html, body {
+    background-color: rgb(240, 240, 240);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton';
+}
+p {
+    font-family: 'Abel';
+}
+h1 h3 {
+    font-size: 64px;
+    width: 100%;
+}
+.design-circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    line-height: 100px;
+    display: inline-block;
+    padding: 18px;
+    margin: 0;
+    font-size: 32px;
+}
+
+.red {
+    background-color: #E6563B;
+    border: 5px solid white;
+
+
+}
+.orange {
+    background-color: #EB9D3A;
+    border: 5px solid white;
+}
+.green {
+    background-color: #7CB06C;
+    border: 5px solid white;
+}
+.blue {
+    background-color: #00ABA9;
+    border: 5px solid white;
+}
+.bg-imgs {
+    margin: 10px;
+}

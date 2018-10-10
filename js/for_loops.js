@@ -9,7 +9,7 @@
 
 
 // for (var i = 1; i <=10; i++) {
-//     var randNum = Math.floor(Math.random() * 181) + 20;
+//     var randNum = Math.floor(Math.random() * 180) + 20;
 //     if (randNum%2===0) {
 //         console.log(i + ": " + randNum + " is even!");
 //     } else {
