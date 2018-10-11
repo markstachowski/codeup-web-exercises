@@ -1,4 +1,4 @@
-//function () {
+//(function () {
 "use strict";
 // Instructions for break_and_continue.js
 // 1. Create a file named break_and_continue.js in the js directory.
