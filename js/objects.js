@@ -54,13 +54,16 @@ var person = {
         if (shopper.amount > 200) {
             var discount = 0.12;
             var newTotal = shopper.amount - (shopper.amount * discount);
-            console.log(shopper.name + " spent $" + shopper.amount + " and is greater than $200. $" + shopper.amount*discount + " applied for new total of $" + newTotal);
+            var newFixedTotal = newTotal.toFixed(2);
+            console.log(shopper.name + " spent $" + shopper.amount + " and is greater than $200. $" + shopper.amount*discount + " applied for new total of $" + newFixedTotal);
         } else {
             console.log(shopper.name + " spent $" + shopper.amount + " and not greater than $200. No discount is applied.");
         }
     });
 
-    
+    function calcDiscount(amount) {
+        var discount = .12;
+    }
 
 
     // function shoppingDiscount() {
