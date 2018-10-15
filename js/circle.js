@@ -5,7 +5,7 @@
     var circle = {
         radius: 3,
 
-        getArea: function (circle) {
+        getArea: function () {
             // TODO: complete this method
             // hint: area = pi * radius^2
             var area = Math.PI * this.radius * this.radius; // TODO: return the proper value
