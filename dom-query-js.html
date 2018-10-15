@@ -5,6 +5,10 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<button type="button" id="btn1">Button 1</button>
+<button type="button" id="btn2">Button 2</button>
+<button type="button" id="btn3">Button 3</button>
+<button type="button" id="btn4">Button 4</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -32,12 +36,24 @@
         var mainHeader = document.getElementById("main-header");
         console.log(mainHeader);
 
+        //Button 1, exercise 1
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function () {
+            mainHeader.innerHTML = "JavaScript is Cool with Buttons!";
+        });
+
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
         console.log(subHeader);
+
+        //Button 2, exercise 2
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", function () {
+            subHeader.style.color = "green";
+        })
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = "blue";
@@ -51,6 +67,18 @@
         listItems[2].style.color = "grey";
         listItems[4].style.color = "grey";
 
+        //Button 3, exercise 3
+        var btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", function () {
+            for (var i = 0; i < listItems.length; i += 1) {
+                if (listItemDbid) {
+                    listItemDbid.style.color = "pink";
+                } else if (listItems[i] % 2 === 0) {
+                    listItems[i].style.color = "red";
+                }
+            }
+        });
+
         // TODO: Set text color of li with dbid = 1 to blue
         var listItemDbid = document.querySelector("li[data-dbid=\"1\"]");
         console.log(listItemDbid);
@@ -60,16 +88,14 @@
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
         console.log(subParagraphs);
 
+        //Button 4, exercise 4
+        var btn4 = document.getElementById("btn4");
+        btn4.addEventListener("click", function () {
+            subParagraphs[0].innerText = "Mission Accomplished, with btn4!";
+        });
+
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerText = "Mission Accomplished!";
-
-        // Array.from(subParagraphs);
-        // subParagraphs.forEach(function(element) {
-        //     element.subParagraphs = "Mission Accomplished!";
-        // });
-        // for (i = 0; i < subParagraphs.length; i++) {
-        //     subParagraphs.innerHTML = "Mission Accomplished!";
-        // }
 
     })();
 </script>
