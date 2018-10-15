@@ -71,9 +71,9 @@
         var btn3 = document.getElementById("btn3");
         btn3.addEventListener("click", function () {
             for (var i = 0; i < listItems.length; i += 1) {
-                if (listItemDbid) {
-                    listItemDbid.style.color = "pink";
-                } else if (listItems[i] % 2 === 0) {
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "pink";
+                } else if (i % 2 === 0) {
                     listItems[i].style.color = "red";
                 }
             }
