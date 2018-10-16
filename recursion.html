@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recursion exercise</title>
+</head>
+<body>
+    <h1>Recursion exercises</h1>
+    <script>
+
+        // Solution 1.
+        var factor = function(number) {
+            var result = 1;
+            var count;
+            for (count = number; count > 1; count--) {
+                result += count;
+            }
+            return result;
+        };
+        //console.log(factor(6));
+
+        // Solution 2.
+        function calcFactor(num) {
+            var result = 1;
+            for (var i = num; i > 1; i -= 1) {
+                result += i;
+            }
+            return result;
+        }
+        //console.log(calcFactor(6));
+
+        // Solution 3.
+        function calcFactor2(num) {
+            var result = 1;
+            for (var i = num; i > 1; i--) {
+                result += i;
+            }
+            return result;
+        }
+        //console.log(calcFactor2(5));
+    </script>
+</body>
+</html>

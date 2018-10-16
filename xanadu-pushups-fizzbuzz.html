@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fizzbuzz exercise</title>
+</head>
+<body>
+    <h1>Fizzbuzz exercises</h1>
+    <script>
+        //Creating a function that iterates from a positive number 1 to infinity and 3 = "fizz", 5 = "buzz", and 15 = "fizzbuzz".
+
+        var fizzbuzz = function fizzbuzz(num) {
+            for (var i = 1; i <= num; i += 1) {
+                if (i % 15 === 0) {
+                    console.log("fizzbuzz");
+                } else if (i % 3 === 0) {
+                    console.log("fizz");
+                } else if (i % 5 === 0) {
+                    console.log("buzz");
+                } else {
+                    console.log(i);
+                }
+            }
+        }
+        //fizzbuzz(30);
+
+        var fizzbuzz2 = function fizzbuzz2(num) {
+            for (var i = 1; i <= num; i++) {
+                if (i % 15 == 0) {
+                    console.log(i + " is div by 15 and fizzbuzz");
+                } else if (i % 5 == 0) {
+                    console.log(i + " is div. by 5");
+                } else if (i % 3 == 0) {
+                    console.log(i + " is div. by 3");
+                } else {
+                    console.log(i);
+                }
+            }
+        }
+        //fizzbuzz2(90)
+
+        var fizzbuzz3 = function fizzbuzz3(number) {
+            var count = 1;
+            for (count; count <= number; count++) {
+                if (count % 15 == 0) {
+                    console.log(count + " is div by 15 and fizzbuzz");
+                } else if (count % 3 == 0) {
+                    console.log(count + " is div by 3");
+                } else if (count % 5 == 0) {
+                    console.log(count + " is div by 5");
+                } else {
+                    console.log(count);
+                }
+            }
+        }
+        //fizzbuzz3(80)
+
+        function passLength(num) {
+            return Math.pow(num, 39);
+        }
+        console.log(passLength(62));
+    </script>
+</body>
+</html>

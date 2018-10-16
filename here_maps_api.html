@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+            type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div style="width: 1024px; height: 800px" id="mapContainer"></div>
+<script>
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+        'app_id': 'xnGPxn9lfBntNwGF1HtZ',
+        'app_code': 'gLt05s4v_s8WYvpa1I6-ug'
+    });
+
+    var mapOptions = {
+            zoom: 10,
+            center: {
+                lat: 29.426714,
+                lng: -98.4917924
+            }
+    };
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.normal.map, mapOptions);
+
+
+    var mapAction = document.getElementById("mapContainer");
+    mapAction.addEventListener("click", function(){
+        window.location.replace("https://cdn5.f-cdn.com/contestentries/1380951/19634276/5b5c71028a887_thumb900.jpg");
+    });
+
+</script>
+</body>
+</html>
