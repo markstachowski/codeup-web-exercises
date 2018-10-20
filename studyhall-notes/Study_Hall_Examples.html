@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study Hall Examples</title>
+</head>
+<body>
+
+    <script>
+        "use strict";
+
+        // functions - write them, using loops, array, objects
+
+            var number = 3;
+
+            function nameOfFunction(num) {
+                return num + 1;
+            }
+
+            console.log(nameOfFunction(number));
+
+            function addNumberTenTimes(startNum, incrementAmount) {
+                var output = startNum;
+                for (var i = 0; i < 10; i++) {
+                    output += incrementAmount;
+                }
+                return output;
+            }
+
+            console.log(addNumberTenTimes(5, 1));
+
+
+
+        // functions that change an array vs. functions that just console log the array
+
+            var letters = ['a', 'b', 'c'];
+            var originalLetters = letters.slice(0);
+            letters.reverse();
+            console.log(letters);
+            console.log(originalLetters);
+
+
+        // arrays of objects
+
+            var users = [
+                {
+                    name: "Billy Smith",
+                    age: 22
+                },
+                {
+                    name: "Fred Smith",
+                    age: 32
+                },
+                {
+                    name: "Sally Smith",
+                    age: 52
+                }
+
+            ];
+
+            function makeUserOlder(users) {
+                for (var i = 0; i < users.length; i += 1) {
+                    // users[i].age++;
+                    console.log(users[i].age);
+                }
+                return users;
+            }
+
+            makeUserOlder(users);
+            // console.log(makeUserOlder(users));
+
+
+
+            // searching for certain items in an array of objects
+            function getFirst52User(users) {
+                for (var i = 0; i < users.length; i += 1) {
+                    if (users[i].age === 52) {
+                        return users[i];
+                    }
+                }
+            }
+
+
+            console.log(getFirst52User(users));
+
+    </script>
+
+</body>
+</html>
