@@ -2,8 +2,24 @@
 
 $(document).ready(function() {
 
-    var multiple = $('h1, p, li').html();
-    alert(multiple);
+$('h1').click(function (e) {
+    $(this).css('background', 'green');
+});
+
+$('p').dblclick(function (e) {
+    $(e.target).css('font-size', '18px');
+})
+
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+    // var multiple = $('h1, p, li').html();
+    // alert(multiple);
 
 // $('.codeuup').css('border', '1px solid red');
 
