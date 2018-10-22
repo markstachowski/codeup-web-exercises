@@ -5,25 +5,41 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>jQuery</title>
+    <title>jQuery Selectors exercises</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 <body>
-    <h1>jQuery</h1>
 
+    <div id="main-title" class="text-center"><h1>jQuery Selectors exercises</h1></div>
+
+    <div id="main-description" class="text-left"><p>This is a paragraph between divs.</p></div>
+        <div id="main-list" class="codeup">
+            <ul>
+                <li class="drinks">Coffee</li>
+                <li class="drinks">Tea</li>
+                <li class="drinks">Milk</li>
+            </ul>
+        </div>
+    <div id="main-title-lower" class="text-center"><h1>Secondary title</h1></div>
+    <hr>
+    <div id="main-description-lower" class="text-left"><p>This is another description about the second section.</p></div>
+        <div id="secondary-list" class="codeup">
+            <ul>
+                <li class="places">City</li>
+                <li class="places">Town</li>
+                <li class="places">Park</li>
+            </ul>
+        </div>
+    <div id="codeup"><p>This is about the list of places.</p></div>
+
+
+    <!--Bootstrap 4 jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-    <script>
-    "use strict";
-
-        $(document).ready(function() {
-            alert("jQuery is ready!");
-        });
-
-    </script>
+    <!--Custom JavaScript file-->
+<script src="js/jquery_exercises.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Coffee Project</title>
+</head>
+<body>
+<h1 class="text-center p-3">Coffee!</h1>
+<hr class="pb-3">
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div id="coffees" class="row"></div>
+        </div>
+    <div class="col-sm-6">
+<!------------------------top form--------------------------->
+            <form>
+                <label for="roast-selection" class="font-weight-bold pb-1">Roast</label><br>
+                <select class="custom-select" id="roast-selection">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br><br>
+                <label for="coffee-name-search" class="font-weight-bold">Coffee Name</label>
+                <br>
+                <input class="input-group" id="coffee-name-search" type="text" name="coffee-name-search">
+                <br>
+                <input class="btn btn-primary btn-block" id="submit" type="submit">
+                <br><br>
+            </form><hr>
+<!--------------------bottom form------------------------>
+            <form>
+                <div class="text-center"><h3>Add a Coffee</h3></div>
+                <label for="roast-selection-bottom" class="font-weight-bold pb-1">Roast</label><br>
+                <select class="custom-select" id="roast-selection-bottom">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br><br>
+                <label for="coffee-name-search-bottom" class="font-weight-bold">Coffee Name</label><br>
+                <input class="input-group" id="coffee-name-search-bottom" type="text" name="coffee-name-search"><br>
+                <input class="btn btn-primary btn-block" id="submit-bottom" type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="main.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
