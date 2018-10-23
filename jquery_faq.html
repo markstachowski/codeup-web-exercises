@@ -18,44 +18,167 @@
     </style>
 </head>
 <body>
-<h1>jQuery FAQ exercise</h1>
 
-<h2>Park F.A.Q.</h2>
-
-<p>Web developers use these languages when they create a site:</p>
-
-<dl>
-    <dt>HTML</dt>
-    <dd><em>HyperText Markup Language</em> describes the structure of the page and its contents.</dd>
-    <dt>CSS</dt>
-    <dd><em>Cascading Style Sheets</em> describes how a site looks and even to some extent how it responds to certain events.</dd>
-    <dt>JavaScript</dt>
-    <dd>JavaScript is the programming language used to define the logic and function of a site beyond simple look and feel. Any computation or "thinking" is done using JavaScript.</dd>
-</dl>
-
-<button id="toggler">Toggle Me</button>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+<main>
+    <header>
+        <h1>jQuery Traversal Methods</h1>
+    </header>
+    <section>
+        <h2>Sub Articles</h2>
+        <article>
+            <h3>Sub Heading 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis cumque deleniti dolores eligendi iste neque quis quisquam rerum voluptate! Adipisci esse exercitationem ipsa, libero maiores necessitatibus obcaecati odit sequi temporibus vel. Aut blanditiis dicta dignissimos doloribus eaque earum error excepturi hic incidunt iure nulla obcaecati, quas quidem quo rem!</p>
+        </article>
+        <article>
+            <h3>Sub Heading 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aliquid aspernatur autem beatae consequatur, deleniti distinctio dolorem dolores enim eos esse eum explicabo fuga harum in laboriosam molestiae nobis nulla odio, pariatur perferendis perspiciatis placeat provident quaerat quasi quia quibusdam ratione rem repudiandae sequi unde vero voluptas voluptates voluptatibus?</p>
+        </article>
+        <article>
+            <h3>Sub Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, soluta.</p>
+        </article>
+    </section>
+    <section>
+        <h2 id="cool-title">Other Articles</h2>
+        <article>
+            <h3>Other Heading 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, delectus!</p>
+        </article>
+        <article>
+            <h3>Other Heading 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, quis.</p>
+        </article>
+        <article>
+            <h3>Other Heading 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vel!</p>
+        </article>
+    </section>
+    <hr>
+    <section>
+        <h3>Item List</h3>
+        <ol>
+            <li>Dog</li>
+            <li>Cat</li>
+            <li>Bread</li>
+            <li>Bowl</li>
+            <li>Car</li>
+            <li>Boat</li>
+            <li>Plane</li>
+            <li>Burger</li>
+        </ol>
+    </section>
+    <section>
+        <h3>Item List</h3>
+        <ul>
+            <li>Dog</li>
+            <li>Cat</li>
+            <li>Bread</li>
+            <li>Bowl</li>
+            <li>Car</li>
+            <li>Boat</li>
+            <li>Plane</li>
+            <li>Burger</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Item List</h3>
+        <ul>
+            <li>Dog</li>
+            <li>Cat</li>
+            <li>Bread</li>
+            <li>Bowl</li>
+            <li>Car</li>
+            <li>Boat</li>
+            <li>Plane</li>
+            <li>Burger</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Item List</h3>
+        <ul>
+            <li>Dog</li>
+            <li>Cat</li>
+            <li>Bread</li>
+            <li>Bowl</li>
+            <li>Car</li>
+            <li>Boat</li>
+            <li>Plane</li>
+            <li>Burger</li>
+        </ul>
+    </section>
+        <button id="selector-btn">Toggle Me</button>
+</main>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <script>
-"use strict";
-$(document).ready(function() {
 
-    // $('dd').addClass('invisible');
+    $(function() {
+        "use strict";
 
-    $('button').click(function () {
-        $('dd').toggleClass('invisible');
-    });
+        $('#selector-btn').click(function () {
+            $('ul').each(function() {
+                    $(this).children().last().css('background-color', 'yellow');
+            });
+        });
 
-    $('dt').click(function () {
-        $(this).css('background', 'yellow');
-    });
+        $('h3').click(function () {
+            $()
+        })
 
-});
+
+
+        // $.each()
+
+        // $.each(['cat', 'dog', 'fish'], function(i, e) {
+        //     console.log(e);
+        // });
+
+        // $.each({name: "fred", age: 23}, function(key, value) {
+        //     console.log(key + " " + value);
+        // });
+
+
+        // $(selector).each()
+
+        //implicit iteration
+        // $('li').css("color", "red");
+        //
+        // $('li').each(function(index, element) {
+        //     // console.log(index);
+        //     $(element).css('background', "#" + (("" + index).repeat(2)));
+        // });
+
+        // .first()
+
+        // $('article').first().css('background', 'lime');
+
+        // .last()
+
+        // $('article').last().css('background', 'lime');
+
+        // .children()
+
+        // $('section').first().children().css('background', 'yellow');
+        // $('section').first().children('article').css('background', 'yellow');
+
+        // .parent()
+
+        // $('#cool-title').parent().css('background', 'firebrick');
+        // $('#cool-title').parents('body').css('background', 'blue');
+
+        // .next() / .prev()
+
+        // explore eq()
+        // $('ol').children()
+        //     .first()
+        //     .next()
+        //     .css('font-size', '50px');
+
+    })
+
 </script>
+
 </body>
 </html>
