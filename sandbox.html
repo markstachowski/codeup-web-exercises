@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Practice JS</title>
+  <title>Practice JS</title>
 </head>
 <script>
-"use strict";
-// Tip calculator
-    function discountCalc(amount, percentage) {
-        var tipAmount = (1 - percentage);
-        return (amount * tipAmount).toFixed(2);
+  "use strict";
+  // Tip calculator
+  function discountCalc( amount, percentage ) {
+    var tipAmount = ( 1 - percentage );
+    return ( amount * tipAmount ).toFixed(2);
+  }
+  //console.log(discountCalc(120.55, .25));
+
+  // Conditional Discount Function Practice
+  function discountApplied( amount, discount ) {
+    if ( amount < 5 && typeof amount === 'number' ) {
+      alert( "Discount not applied to order under $5.00" );
+    } else if ( amount >= 5 && typeof amount === 'number' ) {
+      alert( "Discount applied and new total is: $"
+          + discountCalc( amount, discount ).toFixed(2));
+    } else {
+      alert( "Invalid amount for discount" );
     }
-//console.log(discountCalc(120.55, .25));
+    return typeof amount + " " + amount;
+  }
 
-// Conditional Discount Function Practice
-    function discountApplied(amount, discount) {
-        if (amount < 5 && typeof amount === 'number') {
-            alert("Discount not applied to order under $5.00");
-        } else if (amount >= 5 && typeof amount === 'number') {
-            alert("Discount applied and new total is: $" + discountCalc(amount, discount).toFixed(2));
-        } else {
-            alert("Invalid amount for discount");
-        }
-        return typeof amount + " " + amount;
-    }
+  //console.log(discountApplied(true));
 
-//console.log(discountApplied(true));
+  function stringtoNumber( input, input2 ) {
+    return input + input2;
+  }
 
+  //console.log( stringtoNumber( +"10", 8 ));
 
+  function typeofTest( input ) {
+    return false === input;
+  }
+
+  console.log( typeofTest(!!"string"));
 
 </script>
 </html>
