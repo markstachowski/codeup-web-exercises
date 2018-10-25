@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+  <button id="update-btn">UPDATE</button>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Categories</th>
+  </tr>
+  </thead>
+  <tbody id="insertProducts"></tbody>
+</table>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+
+<script>
+  (function() {
+    "use strict";
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+    var xhrData = $.ajax("data/inventory.json").done(function (data) {
+      console.log(data);
+      buildHTML(data)
+    }).fail(function () {
+      console.log("Not Working!")
+    })
+
+    function buildHTML(dataarr) {
+      var table = "";
+      dataarr.forEach(function (item) {
+        table += '<tr>';
+        table += '<td>'
+        table += item.title;
+        table += '</td>'
+        table += '<td>'
+        table += item.quantity;
+        table += '</td>'
+        table += '<td>'
+        table += item.price;
+        table += '</td>'
+        table += '<td>'
+        table += item.categories;
+        table += '</td>'
+      table += '</tr>';
+      })
+      $('#insertProducts').html(table);
+    }
+
+
+
+
+    //  var pageLoad = function (toolslist) {
+    //   var html = "";
+    //   $('#insertProducts').empty();
+    //   toolslist.forEach(function (tools) {
+    //     html += '<tr>' +
+    //         '<td>' + tools.title + '</td>' +
+    //         '<td>' + tools.quantity + '</td>' +
+    //         '<td>' + tools.price + '</td>' +
+    //         '<td>' + tools.categories + '</td>' +
+    //             '</tr>';
+    //       });
+    //   $('#insertProducts').append(html);
+    // };
+    //
+    //  function loadingData() {
+    //    xhrData.done(pageLoad);
+    //  }
+    //   $('#update-btn').click(function () {
+    //  loadingData()
+    //   });
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+
+  })();
+</script>
+
+</body>
+</html>
