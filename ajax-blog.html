@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajax Blog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Ajax Blog</h1>
+
+  <div id="posts"></div>
+
+  <button id="update-btn">UPDATE</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function(){
+      "use strict";
+
+      // $.ajax('data/blog.json').done(function (data) {
+      //   console.log(data)
+      //   buildHTML(data);
+      // }).fail(function () {
+      //   console.log("Failed ajax request");
+      // });
+
+  function buildHTML(arr) {
+    var html = "";
+    arr.forEach(function (dataBlog) {
+      html += '<div>' +
+              '<h1>' + dataBlog.title + '</h1>' +
+              '<p>' + dataBlog.content + '</p>' +
+              '<h4>' + dataBlog.categories.join(', ') + '</h4>' +
+              '<p>' + dataBlog.date + '</p>' +
+              '</div>';
+    });
+    $('#posts').html(html);
+  }
+
+  $('#update-btn').click(function () {
+    $.ajax('data/blog.json').done(function (data) {
+      console.log(data)
+      buildHTML(data);
+    }).fail(function () {
+      console.log("Failed ajax request");
+    });
+  })
+
+    });
+  </script>
+</body>
+</html>

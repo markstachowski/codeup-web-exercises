@@ -32,35 +32,53 @@
     // TODO: Create an ajax GET request for /data/inventory.json
 
     var xhrData = $.ajax("data/inventory.json").done(function (data) {
-      console.log(data);
-      buildHTML(data)
+      page(data)
     }).fail(function () {
       console.log("Not Working!")
     })
 
-    function buildHTML(dataarr) {
-      var table = "";
-      dataarr.forEach(function (item) {
-        table += '<tr>';
-        table += '<td>'
-        table += item.title;
-        table += '</td>'
-        table += '<td>'
-        table += item.quantity;
-        table += '</td>'
-        table += '<td>'
-        table += item.price;
-        table += '</td>'
-        table += '<td>'
-        table += item.categories;
-        table += '</td>'
-      table += '</tr>';
+    // function buildHTML(dataarr) {
+    //   var table = "";
+    //   dataarr.forEach(function (item) {
+    //     table += '<tr>';
+    //     table += '<td>'
+    //     table += item.title;
+    //     table += '</td>'
+    //     table += '<td>'
+    //     table += item.quantity;
+    //     table += '</td>'
+    //     table += '<td>'
+    //     table += item.price;
+    //     table += '</td>'
+    //     table += '<td>'
+    //     table += item.categories;
+    //     table += '</td>'
+    //   table += '</tr>';
+    //   })
+    //   $('#insertProducts').html(table);
+    // }
+
+    var page = function buildHTML(arr) {
+      var html = "";
+      arr.forEach(function (tools) {
+        html += '<tr>' +
+                '<td>' + tools.title + '</td>' +
+                '<td>' + tools.quantity + '</td>' +
+                '<td>' + tools.price + '</td>' +
+                '<td>' + tools.categories + '</td>' +
+                '</tr>';
       })
-      $('#insertProducts').html(table);
+      $('#insertProducts').html(html);
     }
 
+    function loadingData() {
+      xhrData.done(page);
+    }
 
-
+    $('#update-btn').click(function () {
+      loadingData();
+      console.log("clicked")
+    });
 
     //  var pageLoad = function (toolslist) {
     //   var html = "";
