@@ -4,11 +4,9 @@
 * {
     box-sizing: border-box;
 }
-
 .row {
     display: flex;
 }
-
 /* Create three equal columns that sits next to each other */
 .column {
     flex: 33.33%;
@@ -37,12 +35,9 @@ h1 h3 {
     margin: 0;
     font-size: 32px;
 }
-
 .red {
     background-color: #E6563B;
     border: 5px solid white;
-
-
 }
 .orange {
     background-color: #EB9D3A;

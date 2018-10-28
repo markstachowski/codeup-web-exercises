@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Map</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: rgb(173, 220, 251);
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather Application</h1>
+  <br>
+  <h1 id="weather-area">San Antonio</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm card border-secondary bg-light mb-3">
+        One of three columns
+      </div>
+      <div class="col-sm card border-secondary bg-light mb-3">
+        One of three columns
+      </div>
+      <div class="col-sm card border-secondary bg-light mb-3">
+        One of three columns
+      </div>
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    "use strict";
+
+
+    // APPID: 7f8e3aa0aad113510e0c1eaafd1c17b8
+
+    // location id for SA: 4726206
+
+    // weather api url: http://api.openweathermap.org/data/2.5/forecast
+
+    /**
+     * author Justin Reich
+     * getMinMaxDayTemp returns the minimum and maximum temp for a given day based on the response of a query to the OpenWeatherMap 5-Day Hourly Forecast API
+     * @param data - the response object from the OpenWeatherMap 5-Day Hourly Forecast API
+     * @param day - a number (1-5) representing which day in the next five days to get the min and max temp for;l
+     * @returns {{min: T, max: T}}
+     */
+    const getMinMaxDayTemp = (data, day) => {
+      const temps = data.list.slice(day * 8 - 8, day * 8)
+          .reduce((prev, curr) => {
+            prev.push(curr.main.temp);
+            return prev;
+          }, []).sort();
+      return {min: temps.shift(), max: temps.pop()};
+    };
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+      APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
+      id: 4726206,
+      units: "imperial"
+    }).done(function(data) {
+      console.log(getMinMaxDayTemp(data, 1));
+    });
+
+
+    // alternative way of writing GET request
+    // $.get({
+    //     url: "http://api.openweathermap.org/data/2.5/forecast",
+    //     data: {
+    //         APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
+    //         q: "San Antonio, US"
+    //     }
+    // }).done(function(data) {
+    //     console.log(data);
+    // });
+
+  });
+</script>
+</body>
+</html>
