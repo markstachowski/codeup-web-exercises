@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Stations String manipulation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Train Stations String manipulation</h1>
+
+  <div class="output">
+    <ul></ul>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script>
+    $(function () {
+
+      var list = document.querySelector('.output ul');
+      list.innerHTML = '';
+      var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+        'GNF576746573fhdg4737dh4;Greenfield',
+        'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+        'SYB4f65hf75f736463;Stalybridge',
+        'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+      for (var i = 0; i < stations.length; i++) {
+        var input = stations[i];
+        // write your code just below here
+
+        var code = input.slice(0, 3);
+        var semiC = input.indexOf(';');
+        var name = input.slice(semiC + 1);
+
+        var result = code + ': ' + name;
+        var listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+      }
+
+
+    }());
+  </script>
+</body>
+</html>
