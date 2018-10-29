@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Useful String Methods</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+  <h1>Useful String methods</h1>
+
+  <div class="output">
+    <ul>
+    </ul>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script>
+    $(function() {
+
+      var list = document.querySelector('.output ul');
+      list.innerHTML = '';
+      var greetings = ['Happy Birthday GayBoy!',
+        'Merry Christmas my love',
+        'A happy Christmas to all the family',
+        'You\'re all I want for Christmas',
+        'Get well soon'];
+
+      for (var i = 0; i < greetings.length; i++) {
+        var input = greetings[i];
+        // Your conditional test needs to go inside the parentheses
+        // in the line below, replacing what's currently there
+        if (greetings[i].indexOf('Christmas') !== -1) {
+          var listItem = document.createElement('li');
+          listItem.textContent = input;
+          list.appendChild(listItem);
+        }
+      }
+
+    }());
+  </script>
+</body>
+</html>
