@@ -63,12 +63,12 @@
   //   else { return value4; }
   // }
 
-  function betterCode(input) {
-    return input === 1 ? 1 + 10
-        : true === false ? "true is not eq true"
-            : confirm("Do you want to continue?") ? "Last step next"
-                : alert("Done!");
-  }
+  // function betterCode(input) {
+  //   return input === 1 ? 1 + 10
+  //       : true === false ? "true is not eq true"
+  //           : confirm("Do you want to continue?") ? "Last step next"
+  //               : alert("Done!");
+  // }
 
   //console.log(betterCode(1));
 
@@ -78,7 +78,6 @@
   //   console.log( i );
   // }
 
-  "use strict";
 
   // /**
   //  * TODO:
@@ -101,7 +100,7 @@
     return `half of 100 is ${100 / 2}`;
   }
 
-  console.log(numChecker());
+  //console.log(numChecker());
 
   // var confirmed = confirm("Would you like to enter a number? ");
   //             if (confirmed === true) {
@@ -130,7 +129,15 @@
   //             alert("Exiting program");
   //         }
 
+  var sequence = [1, 1, 2, 3, 5, 8, 13];
+  for (var i = 0; i < sequence.length; i++) {
+    //console.log(sequence[i].length);
+  }
 
+  var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+
+  var myArray = myData.split(',');
+  console.log(myArray.length);
 
 </script>
 </html>
