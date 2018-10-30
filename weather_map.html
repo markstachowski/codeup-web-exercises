@@ -22,13 +22,13 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-sm card border-secondary bg-light mb-3">
+      <div id="weather-panel1" class="col-sm card border-secondary bg-light mb-3">
+
+      </div>
+      <div id="weather-panel2" class="col-sm card border-secondary bg-light mb-3">
         One of three columns
       </div>
-      <div class="col-sm card border-secondary bg-light mb-3">
-        One of three columns
-      </div>
-      <div class="col-sm card border-secondary bg-light mb-3">
+      <div id="weather-panel3" class="col-sm card border-secondary bg-light mb-3">
         One of three columns
       </div>
     </div>
@@ -42,7 +42,6 @@
 <script>
   $(document).ready(function() {
     "use strict";
-
 
     // APPID: 7f8e3aa0aad113510e0c1eaafd1c17b8
 
@@ -66,12 +65,18 @@
       return {min: temps.shift(), max: temps.pop()};
     };
 
-    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+    var weatherAPI = $.get("http://api.openweathermap.org/data/2.5/forecast", {
       APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
       id: 4726206,
       units: "imperial"
     }).done(function(data) {
-      console.log(getMinMaxDayTemp(data, 1));
+      //console.log(getMinMaxDayTemp(data, 1));
+      //console.log(data.list[0]);
+      //console.log(data.list[0].main.humidity);
+
+      // for (var i = 0; i < data.list.length; i++) {
+      //   console.log(data.list[i].main.humidity);
+      // }
     });
 
 
