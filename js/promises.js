@@ -1,8 +1,7 @@
 (function () {
   "use strict";
 
-  const githubToken = '63bc6a9e95c1dca2acf0f727a409c874a351045f';
-  //console.log(githubToken);
+  const githubToken = 'Add Github API key here: https://github.com/settings/tokens';
 
   const wait = (delay) => {
   return new Promise(function(resolve) {
