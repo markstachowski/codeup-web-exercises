@@ -1,5 +1,9 @@
 $(document).ready(function() {
   "use strict";
+  
+  function buildHTML() {
+    
+  }
 
   // APPID: 7f8e3aa0aad113510e0c1eaafd1c17b8
   // location id for SA: 4726206
@@ -33,14 +37,7 @@ $(document).ready(function() {
     //   console.log(data.list[i].main.humidity);
     // }
   });
-
-  function buildHTML(arrObj) {
-    var html = "";
-  }
-
-
-
-
+  
   // alternative way of writing GET request
   // $.get({
   //     url: "http://api.openweathermap.org/data/2.5/forecast",
